@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game">
+
+    <com.under.game.core.library.CustomImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/button_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        style="@style/BasicText"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_balance"
+        android:paddingStart="40dp"
+        android:paddingBottom="3dp"
+        android:textColor="#02D8E9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="500" />
+
+    <LinearLayout
+        android:id="@+id/difficultyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuButton">
+
+        <FrameLayout
+            android:id="@+id/easyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_level">
+
+            <TextView
+                style="@style/BasicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:text="@string/easy"
+                android:textColor="#19143E"
+                android:textSize="50sp" />
+
+            <LinearLayout
+                android:id="@+id/easyTimeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/easyButtonLeft"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/button_arrow" />
+
+                <TextView
+                    android:id="@+id/easyTimeText"
+                    style="@style/BasicText"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@drawable/bg_difficulty_time"
+                    android:textSize="24sp"
+                    tools:text="30" />
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/easyButtonRight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:rotationY="180"
+                    android:src="@drawable/button_arrow" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/normalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/bg_level">
+
+            <TextView
+                style="@style/BasicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:text="@string/normal"
+                android:textColor="#19143E"
+                android:textSize="35sp" />
+
+            <LinearLayout
+                android:id="@+id/normalTimeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/normalButtonLeft"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/button_arrow" />
+
+                <TextView
+                    android:id="@+id/normalTimeText"
+                    style="@style/BasicText"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@drawable/bg_difficulty_time"
+                    android:textSize="24sp"
+                    tools:text="30" />
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/normalButtonRight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:rotationY="180"
+                    android:src="@drawable/button_arrow" />
+
+            </LinearLayout>
+
+            <com.under.game.core.library.CustomImageButton
+                android:id="@+id/normalBuyButton"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/button_price" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/mediumLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_level">
+
+            <TextView
+                style="@style/BasicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:text="@string/medium"
+                android:textColor="#19143E"
+                android:textSize="35sp" />
+
+            <LinearLayout
+                android:id="@+id/mediumTimeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/mediumButtonLeft"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/button_arrow" />
+
+                <TextView
+                    android:id="@+id/mediumTimeText"
+                    style="@style/BasicText"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@drawable/bg_difficulty_time"
+                    android:textSize="24sp"
+                    tools:text="30" />
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/mediumButtonRight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:rotationY="180"
+                    android:src="@drawable/button_arrow" />
+
+            </LinearLayout>
+
+            <com.under.game.core.library.CustomImageButton
+                android:id="@+id/mediumBuyButton"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/button_price" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/hardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_level">
+
+            <TextView
+                style="@style/BasicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:text="@string/hard"
+                android:textColor="#19143E"
+                android:textSize="35sp" />
+
+            <LinearLayout
+                android:id="@+id/hardTimeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/hardButtonLeft"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/button_arrow" />
+
+                <TextView
+                    android:id="@+id/hardTimeText"
+                    style="@style/BasicText"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@drawable/bg_difficulty_time"
+                    android:textSize="24sp"
+                    tools:text="30" />
+
+                <com.under.game.core.library.CustomImageButton
+                    android:id="@+id/hardButtonRight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:rotationY="180"
+                    android:src="@drawable/button_arrow" />
+
+            </LinearLayout>
+
+            <com.under.game.core.library.CustomImageButton
+                android:id="@+id/hardBuyButton"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/button_price" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

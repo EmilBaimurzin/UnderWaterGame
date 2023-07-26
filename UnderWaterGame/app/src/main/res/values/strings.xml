@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UnderWaterGame</string>
+    <string name="pause">Pause</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="easy">EASY</string>
+    <string name="normal">NORMAL</string>
+    <string name="medium">MEDIUM</string>
+    <string name="hard">HARD</string>
+</resources>
